@@ -1,0 +1,19 @@
+{
+  "name": "provoj",
+  "version": "0.1.0",
+  "description": "Simple nodejs testing runner w/ assertions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jdinartejesus/provoj.git"
+  },
+  "author": "Dinarte Jesus <jdinartejesus@gmail.com> (http://github.com/jdinartejesus)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdinartejesus/provoj/issues"
+  },
+  "homepage": "https://github.com/jdinartejesus/provoj#readme"
+}
