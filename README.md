@@ -45,4 +45,13 @@ Provoj is a minimalistic testing runner using nodejs and with assertions.
           done()
         }, 2000)
     })
+
+    runner.test('Should be called after 1s', (done) => {
+      http.get(BASE_URL, (res) => {
+        assert.equal(res.statusCode, 200, 'Status should be equal to 200')
+        done()
+      }).on('error', (err) => {
+        done(err)
+      })
+    })
   ```
