@@ -1,3 +1,15 @@
+function once (fn) {
+  var called
+  return function (err) {
+    if (typeof called !== 'undefined') {
+      return
+    }
+
+    called = fn(err) || null
+    return called
+  }
+}
+
 module.exports = {
   isSetup: false,
   _setup () {
@@ -33,7 +45,7 @@ module.exports = {
 
     try {
       if (test.fn.length) {
-        test.fn(this._testComplete.bind(this, test.msg))
+        test.fn(once(this._testComplete.bind(this, test.msg)))
       } else {
         test.fn()
         this._runNextTest()
