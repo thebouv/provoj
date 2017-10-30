@@ -34,7 +34,7 @@ Provoj is a minimalistic testing runner using nodejs and with assertions.
 
 ### More example with Async:
   **Note:** The tests are currently working in queue, this means the result is only display after all the tests stop running.
-  ```
+  ```javascript
     $ let Provoj = require('provoj');
     $ let runner = Provoj.runner;
     $ let assert = Provoj.assert;
